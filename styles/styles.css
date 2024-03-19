@@ -1,0 +1,17 @@
+{
+    /*modelo de caja
+    margin: 0;
+    padding: 0;
+    */
+    /*font-family: Cambria, Cochin;*/
+}
+
+/*Mobile first*/
+.main{
+    background-image: url(../imgs/banner-bg.jpg);
+    background-position:initial;
+    background-size:contain;
+    background-repeat: no-repeat;
+    height: 1608px;
+    width: 1072px;
+}
