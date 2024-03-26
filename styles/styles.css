@@ -1,84 +1,192 @@
 /*es bloqueante*/
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-:root{
+:root {
     font-size: 16px;
     /*defino la fuente general*/
     font-family: "Ubuntu", sans-serif;
     font-weight: 400;
     font-style: normal;
     box-sizing: border-box;
+    
+    /*TPH: VER 0.2PX QUE FALTA!!!*/
+    /*definir variables!!!*/
+    --tamanio: 25px;
 
     /*definir variables*/
+    --texto-blanco: #ffffff;
+    --color-primario: #9f3647;
+    --fondo-negro: #0a0a0a;
+    
+    /*gris*/
+    --gris: #808080;
 }
 
 * {
-    /*modelo de caja*/
+    /* modelo de caja */
     margin: 0;
     padding: 0;
-   
+    /**/
 }
 
-header {
-    border: 5px solid red;
-    padding: 35px;
-    width: 90vw;
+.header {
+    background-color: var(--color-primario);
+    /*padding-left: 35px; */
+    padding-top: 15px; 
+    width: 100VW;
     box-sizing: border-box;
+    /*height: 10vh;*/
+    padding-bottom: 2vh; 
+}
+.header_logo {
+    display: inline-block;
+    /*border: 1px solid green;*/
+    width: 35vw;
+    margin-left: 35px;
+}
+.header_logo h3 {
+    display: inline;
+    font-weight: 100;
+}
+.header_menu {
+    display: inline-block;    
+    padding-left: 4vw;
 }
 
-.menu {
-    /*background-color: aqua;*/
-}
-.menu li {
-    list-style: none;
-    display: inline-block;
-    width: 20vw;
-    text-align: center;
-    color: blue;
-}
-.menu a{
+.header_menu a {
     text-decoration: none;
+    color: var(--texto-blanco);
+    display: inline-block;
+    font-size: .9em;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.header_menu a:hover {
+    background-color: var(--color-primario);
+    background-origin: inherit;
+    /*border: 1px solid var(--fondo-negro);*/
+    box-shadow: 1px 1px 1px 1px var(--fondo-negro);
+}
+
+.fondoNegro {
+    background-color: var(--fondo-negro);
 }
 
 .ubuntu-regular {
     font-family: "Ubuntu", sans-serif;
     font-weight: 400;
     font-style: normal;
-  }
-  
-  .ubuntu-bold {
+}
+
+.ubuntu-bold {
     font-family: "Ubuntu", sans-serif;
     font-weight: 700;
     font-style: normal;
-  }
-  
-  .ubuntu-regular-italic {
+}
+
+.ubuntu-regular-italic {
     font-family: "Ubuntu", sans-serif;
     font-weight: 400;
     font-style: italic;
-  }
-  
-  .ubuntu-bold-italic {
+}
+
+.ubuntu-bold-italic {
     font-family: "Ubuntu", sans-serif;
     font-weight: 700;
     font-style: italic;
-  }
-
-/*Mobile first*/
-.main{
-    background-image: url(../imgs/banner-bg.jpg);
-    background-size:contain;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100vw;
 }
 
-header{
+.textoBlanco {
+    color: var(--texto-blanco);
+}
+/*Mobile first*/
+.main {
+    background-image: linear-gradient(to right top, #4e4b4b8a, #0000008a), url(../imgs/banner-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 75vh/*px|vh|vw|%*/;
+    width: 100vw;/*relativo al viewport*/
+    text-align: center;
+}
+.main h1 {
+    font-size: 3rem;/*3 * 16px*/    
+    /*text-align: center;*/
+    padding-top: 5vh;
+}
+
+.main h2 {
+    font-size: 2rem;
+    padding-top: 5vh;
+    font-weight: 300;
+}
+
+.main button{
+    width: 10vw;
+    min-width: 20vw;
+    /*TODO:max-width: 25vw; ver que pasa!*/ 
+    height: 10vh;
+    min-height: 50PX;
+    margin-top: 5vh;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: 700;
+    background-color: #9f3647;
+}
+
+header {
     font-size: 19px;
 }
 
 /*fuentes*/
-h3{
+h3 {
     color: green;
     font-size: 1.17em; /*16px * 1.17*/
 }
+
+/*estilos formulario de busqueda de peliculas*/
+.form-busqueda {
+    background-color: var(--fondo-negro);
+    color: var(--texto-blanco);
+    height: 50vh;
+    padding-top: 15vh;
+    text-align: center;
+}
+/*selectores avanzados*/
+.form-busqueda h2{
+    font-size: 2rem;
+}
+.form-busqueda form {
+    margin-top: 5vh;
+}
+.form-busqueda form input {
+    border-radius: 20px;
+    padding: 10px 10px;
+    border: none;
+    color: var(--gris);
+    text-transform: capitalize;
+    /*tph: investigar como sacar el border*/
+    width: 50vw;
+}
+.form-busqueda form button {
+    border-radius: 20px;
+    padding: 10px 10px;    
+    min-width: 10vw;
+    border: 2px solid var(--texto-blanco);
+    background-color: var(--color-primario);
+    color: var(--texto-blanco);
+    margin-left: 1vw;
+}
+.form-busqueda hr {
+    text-align: center;
+    margin-top: 15vh;
+    width: 60vw;
+}
+/*media query: po☺des hacer lo quieras!
+@media screen (){
+    
+}
+*/
+
