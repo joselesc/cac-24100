@@ -102,6 +102,7 @@
 }
 /*Mobile first*/
 .main {
+  
     background-image: linear-gradient(to right top, #4e4b4b8a, #0000008a), url(../imgs/banner-bg.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -109,6 +110,9 @@
     height: 75vh/*px|vh|vw|%*/;
     width: 100vw;/*relativo al viewport*/
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .main h1 {
     font-size: 3rem;/*3 * 16px*/    
@@ -160,6 +164,7 @@ h3 {
 }
 .form-busqueda form {
     margin-top: 5vh;
+    margin-bottom: 15vh;
 }
 .form-busqueda form input {
     border-radius: 20px;
@@ -179,14 +184,41 @@ h3 {
     color: var(--texto-blanco);
     margin-left: 1vw;
 }
-.form-busqueda hr {
-    text-align: center;
-    margin-top: 15vh;
-    width: 60vw;
+.form-busqueda hr {    
+    width: 70vw;
+    margin: 0 auto;/*una forma de center*/
+    /*text-align: center*/
+    border: 1px solid var(--color-primario)
 }
-/*media query: po☺des hacer lo quieras!
-@media screen (){
-    
+/*efecto cuando pasamos sobre el boton*/
+.form-busqueda form button:hover {
+    width: 10.5vw;
+}
+/*agrupado: ,
+p,h1,h2,h3 {
+    color: blue !important;
+}
+*/
+/*hijos directo: >  
+section > h2 {
+    color: greenyellow;
+}
+*/
+/*hermano adyacente: +
+form#frm input + button {
+  color: green !important;  
+}
+*/
+/*hermano general: ~
+h2 ~ form {
+    background-color: green !important; 
 }
 */
 
+/*position*/
+#goBack {
+    position: fixed;
+    top: 5px;
+    left: 15px;
+    /*tph: poner a bajo a la derecha!!!*/
+}   

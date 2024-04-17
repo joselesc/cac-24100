@@ -1,58 +1,72 @@
-
 <!DOCTYPE html>
 
 <!-- estructura basica-->
-    <head>
-        <link rel="icon" type="image/png" sizes="16x16"  href="./favicon-16x16.png">
-        <!-- esto lo ve el browser, pero no el usuario-->
-        <title>Clase1 - HTML</title>
-        <!-- aca podemos poner un icono-->
-        <link rel="stylesheet" href="./styles/styles.css">
-    
-        <!--importar las fuente
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-        -->
-    </head>
-    
-    <body>
-        <!-- header-->
-        <header class="header">
-            <div class="header_logo">
-                <i class="fa-solid fa-film textoBlanco"></i>
-                <h3 class="textoBlanco">CAC - Movies</h3><!--convierto a inline-->
-            </div>
-    
-            <div class="header_menu">
-                <a href="">Tendencias</a>
-                <a href="">Registrarse</a>
-                <a href="" class="fondoNegro">Iniciar Sesión</a>
-            </div>
-        </header>
-        <main>
-    
-            <!-- imagen de fondo con los titulos y botones-->
-            <section class="main">
-                <h1 class="textoBlanco">Películas y series ilimitadas<br> en un solo lugar</h1>
-                <h2 class="textoBlanco">Disfruta donde quieras.<br> Cancela en caulquier momento</h2>
-                <button class="textoBlanco">
-                    Registrate
+<head>
+    <link rel="icon" type="image/png" sizes="16x16"  href="./favicon-16x16.png">
+    <!-- esto lo ve el browser, pero no el usuario-->
+    <title>Clase1 - HTML</title>
+    <!-- aca podemos poner un icono-->
+    <link rel="stylesheet" href="./styles/styles.css">
+
+    <!--importar las fuente
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    -->
+</head>
+
+<body>
+    <!-- header-->
+    <header class="header">
+        <div class="header_logo">
+            <i class="fa-solid fa-film textoBlanco"></i>
+            <h3 class="textoBlanco">CAC - Movies</h3><!--convierto a inline-->
+        </div>
+
+        <div class="header_menu">
+            <a href="">Tendencias</a>
+            <a href="">Registrarse</a>
+            <a href="" class="fondoNegro">Iniciar Sesión</a>
+        </div>
+    </header>
+    <main>
+
+        <!-- imagen de fondo con los titulos y botones-->
+        <section class="main">
+            <h1 class="textoBlanco">Películas y series ilimitadas<br> en un solo lugar</h1>
+            <h2 class="textoBlanco">Disfruta donde quieras.<br> Cancela en cualquier momento</h2>
+            <button class="textoBlanco">
+                Registrate
+            </button>
+        </section>
+        <section class="form-busqueda">
+            <h2>¿Qué estas buscando para ver?</h2>
+            <form action="./html/resultado-busqueda.html"
+                id="frm">
+                <input type="search" 
+                    placeholder="Buscar...">
+                <button>
+                    Buscar
                 </button>
-            </section>
-            <section class="form-busqueda">
-                <h2>¿Qué estas buscando para ver?</h2>
-                <form action="./html/resultado-busqueda.html">
-                    <input type="search" 
-                        placeholder="Buscar...">
-                    <button>
-                        Buscar
-                    </button>
-                </form>
-                <hr>
-            </section>
-        </main>
-    
-        <script src="https://kit.fontawesome.com/181725805d.js" crossorigin="anonymous"></script>
-    </body>
-    </html>
+            </form>
+            <hr>        
+        </section>
+    </main>
+    <!--
+    <table class="tabla">
+        <tr class="odd">
+            <td>
+                
+            </td>
+        </tr>
+        <tr class="even">
+            <td>
+
+            </td>
+        </tr>
+    </table>
+    -->
+    <i class="fa fa-circle" id="goBack"></i>
+    <script src="https://kit.fontawesome.com/181725805d.js" crossorigin="anonymous"></script>
+</body>
+</html>
